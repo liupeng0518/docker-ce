@@ -1,7 +1,7 @@
 # Common builder
 ARG GO_IMAGE
 FROM ${GO_IMAGE} as builder
-
+ENV GOARCH mips64le
 COPY hack/dockerfile/install/tini.installer /
 COPY hack/dockerfile/install/proxy.installer /
 RUN apt-get update && apt-get install -y \

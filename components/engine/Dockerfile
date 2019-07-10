@@ -27,6 +27,7 @@
 FROM golang:1.10.8 AS base
 # FIXME(vdemeester) this is kept for other script depending on it to not fail right away
 # Remove this once the other scripts uses something else to detect the version
+ENV GOARCH mips64le
 ENV GO_VERSION 1.10.8
 # allow replacing httpredir or deb mirror
 ARG APT_MIRROR=deb.debian.org

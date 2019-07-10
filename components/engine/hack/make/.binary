@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e
-
+export GOARCH=mips64le
 # a helper to provide ".exe" when it's appropriate
 binary_extension() {
 	if [ "$(go env GOOS)" = 'windows' ]; then

@@ -1,6 +1,6 @@
 
 FROM    golang:1.10.8-alpine
-
+ENV	GOARCH=mips64le
 RUN     apk add -U git make bash coreutils ca-certificates curl
 
 ARG     VNDR_SHA=1fc68ee0c852556a9ed53cbde16247033f104111

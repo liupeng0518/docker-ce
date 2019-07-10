@@ -1,5 +1,5 @@
 FROM    golang:1.10.8-alpine
-
+ENV	GOARCH=mips64le
 RUN     apk add -U git
 
 ARG     GOMETALINTER_SHA=v2.0.6

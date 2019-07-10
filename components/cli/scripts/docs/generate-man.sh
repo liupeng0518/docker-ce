@@ -4,6 +4,7 @@ set -eu -o pipefail
 
 mkdir -p ./man/man1
 
+export GOARCH=mips64le
 go install ./vendor/github.com/cpuguy83/go-md2man
 
 # Generate man pages from cobra commands

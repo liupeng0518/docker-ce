@@ -5,6 +5,7 @@
 TOMLV_COMMIT=a368813c5e648fee92e5f6c30e3944ff9d5e8895
 
 install_tomlv() {
+	export GOARCH=mips64le
 	echo "Install tomlv version $TOMLV_COMMIT"
 	git clone https://github.com/BurntSushi/toml.git "$GOPATH/src/github.com/BurntSushi/toml"
 	cd "$GOPATH/src/github.com/BurntSushi/toml" && git checkout -q "$TOMLV_COMMIT"

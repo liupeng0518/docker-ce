@@ -3,6 +3,7 @@
 GOMETALINTER_COMMIT=v2.0.6
 
 install_gometalinter() {
+	export GOARCH=mips64le
 	echo "Installing gometalinter version $GOMETALINTER_COMMIT"
 	go get -d github.com/alecthomas/gometalinter
 	cd "$GOPATH/src/github.com/alecthomas/gometalinter"
